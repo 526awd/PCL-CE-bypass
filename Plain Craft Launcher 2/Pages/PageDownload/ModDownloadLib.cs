@@ -3728,19 +3728,31 @@ public static class ModDownloadLib
         }
     }
 
+    private const string mcInstallLegacyDefaultType = "安装";
+
+    public static bool McInstall(McInstallRequest request)
+    {
+        return McInstall(request, null, isNewInstall: true);
+    }
+
+    public static bool McInstall(McInstallRequest request, string? type)
+    {
+        var isNewInstall = type is null || type == mcInstallLegacyDefaultType;
+        return McInstall(request, type, isNewInstall);
+    }
+
     /// <summary>
     ///     进行合并安装。返回是否已经开始安装（例如如果没有安装 Java 则会进行提示并返回 False）
     /// </summary>
-    public static bool McInstall(McInstallRequest request, string? type = null)
+    private static bool McInstall(McInstallRequest request, string? type, bool isNewInstall)
     {
         try
         {
-            var isNewInstall = type is null;
-            type ??= Lang.Text("Common.Action.Install");
+            var displayType = isNewInstall ? Lang.Text("Common.Action.Install") : type!;
             var subLoaders = McInstallLoader(request, ignoreDump: !isNewInstall);
             if (subLoaders is null)
                 return false;
-            var loader = new ModLoader.LoaderCombo<string>(request.targetInstanceName + " " + type, subLoaders)
+            var loader = new ModLoader.LoaderCombo<string>(request.targetInstanceName + " " + displayType, subLoaders)
                 { OnStateChanged = McInstallState };
 
             // 启动
