@@ -3657,15 +3657,15 @@ public static class ModDownloadLib
             {
                 if (Config.Download.AutoSelectInstance)
                 {
-                    var versionName = loader.name;
+                    var versionName = ModBase.GetFolderNameFromPath((string)combo.input);
                     ModBase.WriteIni(ModFolder.mcFolderSelected + "PCL.ini", "Version",
-                        versionName.Remove(versionName.Length - 3, 3));
+                        versionName);
                 }
 
                 ModBase.WriteIni(ModFolder.mcFolderSelected + "PCL.ini", "InstanceCache",
                     ""); // 清空缓存（合并安装会先生成文件夹，这会在刷新时误判为可以使用缓存）
                 ModBase.DeleteDirectory($"{combo.input}PCLInstallBackups\\");
-                HintService.Hint($"{loader.name}{Lang.Text("Common.Status.Success")}",
+                HintService.Hint(Lang.Text("Common.Status.TaskSuccess", loader.name),
                     HintType.Success);
                 break;
             }
@@ -3728,16 +3728,16 @@ public static class ModDownloadLib
         }
     }
 
-    private const string mcInstallDefaultType = "安装";
-
     /// <summary>
     ///     进行合并安装。返回是否已经开始安装（例如如果没有安装 Java 则会进行提示并返回 False）
     /// </summary>
-    public static bool McInstall(McInstallRequest request, string type = mcInstallDefaultType)
+    public static bool McInstall(McInstallRequest request, string? type = null)
     {
         try
         {
-            var subLoaders = McInstallLoader(request, ignoreDump: type != mcInstallDefaultType);
+            var isNewInstall = type is null;
+            type ??= Lang.Text("Common.Action.Install");
+            var subLoaders = McInstallLoader(request, ignoreDump: !isNewInstall);
             if (subLoaders is null)
                 return false;
             var loader = new ModLoader.LoaderCombo<string>(request.targetInstanceName + " " + type, subLoaders)
