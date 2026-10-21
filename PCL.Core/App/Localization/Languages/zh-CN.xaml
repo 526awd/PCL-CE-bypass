@@ -2202,10 +2202,10 @@
     <sys:String x:Key="Minecraft.Launch.Donate.Title">{0} 次启动！</sys:String>
     <sys:String x:Key="Minecraft.Launch.ExportScript.Cancelled">已取消导出启动脚本！</sys:String>
     <sys:String x:Key="Minecraft.Launch.ExportScript.Success">导出启动脚本成功！</sys:String>
-    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Later">下次一定</sys:String>
-    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Message">看起来你似乎没买正版...&#xA;如果觉得 Minecraft 还不错，可以购买正版支持一下，毕竟开发游戏也真的很不容易...不要一直白嫖啦。&#xA;&#xA;在验证一个正版账号之后，就不会出现这个提示了！</sys:String>
-    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Purchase">支持正版游戏！</sys:String>
-    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Title">考虑一下正版？</sys:String>
+    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Later">稍后再说</sys:String>
+    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Message">启动器中尚未检测到已登录的微软账号档案。&#xA;如果你已经购买 Minecraft Java 版，请登录购买时使用的微软账号；如果还没有购买，欢迎通过官方渠道支持 Minecraft 的持续开发。&#xA;&#xA;完成正版验证后，启动时将不再显示这条提示。</sys:String>
+    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Purchase">查看官方购买页面</sys:String>
+    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Title">尚未使用正版账号登录</sys:String>
     <sys:String x:Key="Minecraft.Launch.Success">{0} 启动成功！</sys:String>
 
     <!-- Minecraft.Launch.Error -->
@@ -2312,19 +2312,19 @@
 
     <!-- Minecraft.Launch.Precheck -->
 
-    <sys:String x:Key="Minecraft.Launch.Precheck.AuthServerMismatch">当前档案使用的第三方验证服务器与实例要求使用的不一致，请使用符合要求的档案启动游戏！</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.AuthServerMismatch">当前档案使用的第三方验证服务器与此实例要求的不一致。请切换到使用正确验证服务器的档案后再启动。</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.Failed.WithDetail">启动前检查失败：{0}</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.InstanceError">Minecraft 存在问题：{0}</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.InvalidPathChars">游戏路径中不可包含 ! 或 ;（{0}）</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NoInstance">未选择 Minecraft 实例！</sys:String>
-    <sys:String x:Key="Minecraft.Launch.Precheck.NoProfile">请先选择一个档案再启动游戏！</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.NoProfile">尚未选择游戏档案。请选择一个档案后再启动 Minecraft。</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NonAsciiPath.Back">返回处理</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NonAsciiPath.Continue">继续</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NonAsciiPath.Message">欲启动实例 "{0}" 的路径中存在可能影响游戏正常运行的字符（非 ASCII 字符），是否仍旧启动游戏？&#xA;&#xA;如果不清楚具体作用，你可以先选择 "继续"，发现游戏在启动后很快出现崩溃的情况后再尝试修改游戏路径等操作</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NonAsciiPath.Title">游戏路径检查</sys:String>
-    <sys:String x:Key="Minecraft.Launch.Precheck.RequireMicrosoft">当前实例要求使用正版验证，请使用正版验证档案启动游戏！</sys:String>
-    <sys:String x:Key="Minecraft.Launch.Precheck.RequireMicrosoftOrThirdParty">当前实例要求使用正版验证或第三方验证，请使用符合要求的档案启动游戏！</sys:String>
-    <sys:String x:Key="Minecraft.Launch.Precheck.RequireThirdParty">当前实例要求使用第三方验证，请使用第三方验证档案启动游戏！</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.RequireMicrosoft">此实例要求使用微软账号验证。当前档案不是微软账号档案，请切换到已登录的微软账号档案后再启动。</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.RequireMicrosoftOrThirdParty">此实例要求使用微软账号或第三方验证。当前档案不符合要求，请切换到对应的档案后再启动。</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.RequireThirdParty">此实例要求使用第三方验证。请切换到对应的第三方验证档案后再启动。</sys:String>
 
     <!-- Minecraft.Launch.Stage -->
 

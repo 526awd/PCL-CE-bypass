@@ -88,7 +88,7 @@ public static class ModLaunch
         if (!string.IsNullOrEmpty(checkResult))
         {
             ModBase.Log($"[Launch] 登录要求不满足，但已改为警告模式：{checkResult}");
-            HintService.Hint(checkResult, HintType.Warning);
+            ModMain.MyMsgBox(checkResult, Lang.Text("Common.Dialog.Warning"), Lang.Text("Common.Action.Confirm"), isWarn: true);
         }
 
 #if BETA

@@ -2155,10 +2155,10 @@
     <sys:String x:Key="Minecraft.Launch.Donate.Title">{0} 次啟動！</sys:String>
     <sys:String x:Key="Minecraft.Launch.ExportScript.Cancelled">已取消匯出啟動指令碼！</sys:String>
     <sys:String x:Key="Minecraft.Launch.ExportScript.Success">匯出啟動指令碼成功！</sys:String>
-    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Later">下次一定</sys:String>
-    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Message">看起來你似乎沒買游戲...&#xA;如果覺得 Minecraft 還不錯，可以購買支援一下，畢竟開發遊戲也真的很不容易...不要一直接嫖啦。&#xA;&#xA;在驗證一個微軟帳戶後，就不會出現這個提示了！</sys:String>
-    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Purchase">支援！</sys:String>
-    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Title">考慮購買一下游戲？</sys:String>
+    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Later">稍後再說</sys:String>
+    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Message">啟動器中尚未偵測到已登入的 Microsoft 帳戶檔案。&#xA;如果你已購買 Minecraft Java 版，請登入購買時使用的 Microsoft 帳戶；如果尚未購買，歡迎透過官方管道支持 Minecraft 的持續開發。&#xA;&#xA;完成正版驗證後，啟動時將不再顯示這則提示。</sys:String>
+    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Purchase">查看官方購買頁面</sys:String>
+    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Title">尚未使用正版帳戶登入</sys:String>
     <sys:String x:Key="Minecraft.Launch.Success">{0} 啟動成功！</sys:String>
 
     <!-- Minecraft.Launch.Error -->
@@ -2265,19 +2265,19 @@
 
     <!-- Minecraft.Launch.Precheck -->
 
-    <sys:String x:Key="Minecraft.Launch.Precheck.AuthServerMismatch">目前檔案使用的第三方驗證伺服器與實例要求使用的不一致，請使用符合要求的檔案啟動遊戲！</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.AuthServerMismatch">目前檔案使用的第三方驗證伺服器與此實例要求的不一致。請切換到使用正確驗證伺服器的檔案後再啟動。</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.Failed.WithDetail">啟動前檢查失敗：{0}</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.InstanceError">Minecraft 存在問題：{0}</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.InvalidPathChars">遊戲路徑中不可包含「!」或「;」（{0}）</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NoInstance">未選擇 Minecraft 實例！</sys:String>
-    <sys:String x:Key="Minecraft.Launch.Precheck.NoProfile">請先選擇一個檔案再啟動遊戲！</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.NoProfile">尚未選擇遊戲檔案。請先選擇一個檔案，再啟動 Minecraft。</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NonAsciiPath.Back">返回處理</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NonAsciiPath.Continue">繼續</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NonAsciiPath.Message">欲啟動實例 "{0}" 的路徑中存在可能影響遊戲正常執行的字元（非 ASCII 字元），是否仍舊啟動遊戲？&#xA;&#xA;如果不清楚具體作用，你可以先選擇 "繼續"，發現遊戲在啟動後很快出現崩潰的情況後再嘗試修改遊戲路徑等操作</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NonAsciiPath.Title">遊戲路徑檢查</sys:String>
-    <sys:String x:Key="Minecraft.Launch.Precheck.RequireMicrosoft">目前實例要求使用微軟驗證，請使用微軟驗證檔案啟動遊戲！</sys:String>
-    <sys:String x:Key="Minecraft.Launch.Precheck.RequireMicrosoftOrThirdParty">目前實例要求使用微軟驗證或第三方驗證，請使用符合要求的檔案啟動遊戲！</sys:String>
-    <sys:String x:Key="Minecraft.Launch.Precheck.RequireThirdParty">目前實例要求使用第三方驗證，請使用第三方驗證檔案啟動遊戲！</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.RequireMicrosoft">此實例要求使用 Microsoft 帳戶驗證。目前的檔案不是 Microsoft 帳戶檔案，請切換到已登入的 Microsoft 帳戶檔案後再啟動。</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.RequireMicrosoftOrThirdParty">此實例要求使用 Microsoft 帳戶或第三方驗證。目前的檔案不符合要求，請切換到對應的檔案後再啟動。</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.RequireThirdParty">此實例要求使用第三方驗證。請切換到對應的第三方驗證檔案後再啟動。</sys:String>
 
     <!-- Minecraft.Launch.Stage -->
 

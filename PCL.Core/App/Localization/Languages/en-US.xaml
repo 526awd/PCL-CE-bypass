@@ -2202,10 +2202,10 @@
     <sys:String x:Key="Minecraft.Launch.Donate.Title">{0} launches!</sys:String>
     <sys:String x:Key="Minecraft.Launch.ExportScript.Cancelled">Exporting launch script canceled!</sys:String>
     <sys:String x:Key="Minecraft.Launch.ExportScript.Success">Launch script exported successfully!</sys:String>
-    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Later">Nah, maybe next time</sys:String>
-    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Message">It looks like you haven't purchased the game...&#xA;If you think Minecraft is good, consider purchasing it to support the developers... Don't keep freeloading.&#xA;&#xA;This prompt will no longer appear after you verify a valid Microsoft account!</sys:String>
-    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Purchase">Purchase!</sys:String>
-    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Title">Purchase the game?</sys:String>
+    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Later">Maybe later</sys:String>
+    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Message">No signed-in Microsoft profile was found in the launcher.&#xA;If you already own Minecraft: Java Edition, sign in to the Microsoft account used for your purchase. If not, you can support Minecraft's continued development by purchasing it through the official store.&#xA;&#xA;This reminder will stop appearing once a Microsoft profile has been added.</sys:String>
+    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Purchase">View the official store</sys:String>
+    <sys:String x:Key="Minecraft.Launch.PurchaseHint.Title">No Microsoft account is signed in</sys:String>
     <sys:String x:Key="Minecraft.Launch.Success">{0} launched successfully!</sys:String>
 
     <!-- Minecraft.Launch.Error -->
@@ -2312,19 +2312,19 @@
 
     <!-- Minecraft.Launch.Precheck -->
 
-    <sys:String x:Key="Minecraft.Launch.Precheck.AuthServerMismatch">The third-party login server used by the current profile does not match the one required by this instance. Please use a matching profile!</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.AuthServerMismatch">The third-party authentication server for this profile does not match the one required by this instance. Switch to a profile using the correct server before launching.</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.Failed.WithDetail">Launch precheck failed: {0}</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.InstanceError">Minecraft has a problem: {0}</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.InvalidPathChars">Game path cannot contain ! or ; ({0})</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NoInstance">No Minecraft instance selected!</sys:String>
-    <sys:String x:Key="Minecraft.Launch.Precheck.NoProfile">Please select a profile before launching!</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.NoProfile">No game profile is selected. Select a profile before launching Minecraft.</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NonAsciiPath.Back">Back</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NonAsciiPath.Continue">Continue</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NonAsciiPath.Message">The path of instance "{0}" contains characters that may affect the game (non-ASCII characters). Do you still want to launch?&#xA;&#xA;If you are unsure, you can choose "Continue" first, and try modifying the game path if the game crashes shortly after launch.</sys:String>
     <sys:String x:Key="Minecraft.Launch.Precheck.NonAsciiPath.Title">Game path check</sys:String>
-    <sys:String x:Key="Minecraft.Launch.Precheck.RequireMicrosoft">This instance requires Microsoft login. Please use a Microsoft login profile!</sys:String>
-    <sys:String x:Key="Minecraft.Launch.Precheck.RequireMicrosoftOrThirdParty">This instance requires Microsoft or third-party login. Please use a matching profile!</sys:String>
-    <sys:String x:Key="Minecraft.Launch.Precheck.RequireThirdParty">This instance requires third-party login. Please use a third-party login profile!</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.RequireMicrosoft">This instance requires Microsoft authentication. The selected profile is not a Microsoft profile; switch to a signed-in Microsoft profile before launching.</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.RequireMicrosoftOrThirdParty">This instance requires Microsoft or third-party authentication. The selected profile does not meet that requirement; switch to a compatible profile before launching.</sys:String>
+    <sys:String x:Key="Minecraft.Launch.Precheck.RequireThirdParty">This instance requires third-party authentication. Switch to a compatible third-party profile before launching.</sys:String>
 
     <!-- Minecraft.Launch.Stage -->
 
