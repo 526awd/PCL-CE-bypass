@@ -86,7 +86,10 @@ public static class ModLaunch
         }
 
         if (!string.IsNullOrEmpty(checkResult))
-            throw new ArgumentException(checkResult);
+        {
+            ModBase.Log($"[Launch] 登录要求不满足，但已改为警告模式：{checkResult}");
+            HintService.Hint(checkResult, HintType.Warning);
+        }
 
 #if BETA
         if (currentLaunchOptions?.SaveBatch is null) // 保存脚本时不提示

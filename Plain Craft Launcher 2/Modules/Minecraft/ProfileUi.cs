@@ -184,7 +184,8 @@ public static class ProfileUi
 #if DEBUG || DEBUGCI
         return true;
 #else
-        return ProfileService.HasMicrosoftProfile || (Lang.IsFeaturesUnrestricted && ProfileService.Profiles.Count > 0) || NetworkHelper.IsNetworkAvailable() is false;
+        // 改为警告模式：即使没有微软账号，也允许创建/切换其他登录方式。
+        return true;
 #endif
     }
 
