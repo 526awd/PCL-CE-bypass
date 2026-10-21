@@ -12,6 +12,11 @@ public static class UpdateManager
 {
     public static bool isUpdateWaitingRestart;
 
+    public static bool IsUpdateDisabled()
+    {
+        return Config.Update.UpdateMode == LauncherAutoUpdateBehavior.Disable;
+    }
+
     public static UpdatesWrapperModel remoteServer = new(new List<IUpdateSource>
     {
         new UpdatesMirrorChyanModel(),
@@ -72,6 +77,12 @@ public static class UpdateManager
 
     public static void UpdateStart(UpdateEnums.UpdateType type, string receivedKey = null, bool forceValidated = false)
     {
+        if (IsUpdateDisabled())
+        {
+            ModBase.Log("[Update] 更新已被代码禁用，忽略本次检查");
+            return;
+        }
+
         var dlTargetPath = ModBase.exePath + @"PCL\Plain Craft Launcher Community Edition.exe";
         ModBase.RunInNewThread(() =>
         {
@@ -243,6 +254,12 @@ public static class UpdateManager
 
     private static void ScheduleBasedOnConfig()
     {
+        if (IsUpdateDisabled())
+        {
+            ModBase.Log("[Update] 更新设置: 已通过代码禁用自动更新");
+            return;
+        }
+
         switch (Config.Update.UpdateMode)
         {
             case LauncherAutoUpdateBehavior.DownloadAndInstall:

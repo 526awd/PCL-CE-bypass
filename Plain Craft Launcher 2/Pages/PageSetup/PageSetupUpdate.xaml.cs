@@ -63,6 +63,17 @@ public partial class PageSetupUpdate
 
     public async void CheckUpdate()
     {
+        if (UpdateManager.IsUpdateDisabled())
+        {
+            ModBase.Log("[Update] 更新已禁用，停止检查");
+            CardUpdate.Visibility = Visibility.Collapsed;
+            CardCheck.Visibility = Visibility.Visible;
+            TextCurrentDesc.Text = Lang.Text("Setup.Update.Latest");
+            BtnCheckAgain.IsEnabled = false;
+            BtnUpdate.IsEnabled = false;
+            return;
+        }
+
         ModBase.Log("[Update] 开始检查更新");
         CardUpdate.Visibility = Visibility.Collapsed;
         CardCheck.Visibility = Visibility.Visible;
@@ -159,6 +170,12 @@ public partial class PageSetupUpdate
 
     private void BtnUpdate_Click(object sender, MouseButtonEventArgs e)
     {
+        if (UpdateManager.IsUpdateDisabled())
+        {
+            ModBase.Log("[Update] 更新按钮已禁用，阻止手动更新");
+            return;
+        }
+
         if (UpdateManager.isUpdateWaitingRestart) UpdateManager.UpdateRestart(true);
         // 开始更新流程
         UpdateManager.UpdateStart(UpdateEnums.UpdateType.UpdateNow);
