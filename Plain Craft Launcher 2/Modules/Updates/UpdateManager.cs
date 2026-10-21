@@ -79,7 +79,7 @@ public static class UpdateManager
     {
         if (IsUpdateDisabled())
         {
-            ModBase.Log("[Update] 更新已被代码禁用，忽略本次检查");
+            ModBase.Log("[Update] 更新已被代码禁用");
             return;
         }
 
